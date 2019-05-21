@@ -7,10 +7,7 @@
 <script>
 import myHeader from './Header.vue'
 export default {
- // name: 'HelloWorld',
-  props: {
-    msg: String
-  },
+  name: 'layout',
   components: {
         'myHeader': myHeader,
     },

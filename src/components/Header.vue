@@ -2,15 +2,14 @@
 <div>
     <div>
         <ul>
-            <router-link to='home'>HOME</router-link>
             <li @click="changeRoute('home')">Home</li>
             <li @click="changeRoute('account')">Account</li>
-            <li>Recipe</li>
-            <li>Archive</li>
-            <li>Search Results</li>
-            <li>Adding Recipe</li>
-            <li>Log in</li>
-            <li>Register</li>
+            <li @click="changeRoute('recipe')">Recipe</li>
+            <li @click="changeRoute('archive')">Archive</li>
+            <li @click="changeRoute('search-res')">Search Results</li>
+            <li @click="changeRoute('add-recipe')">Adding Recipe</li>
+            <li @click="changeRoute('login')">Log in</li>
+            <li @click="changeRoute('register')">Register</li>
         </ul>
     </div>
 </div>

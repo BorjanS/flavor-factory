@@ -1,8 +1,38 @@
 import Vue from 'vue'
-import App from './App.vue'
+import App from './App'
+import VueRouter from 'vue-router'
+
+import home from '../src/components/Home.vue'
+import account from '../src/components/Account.vue'
+import recipe from '../src/components/Recipe.vue'
+import archive from '../src/components/Archive.vue'
+import addRecipe from '../src/components/AddingRecipe.vue'
+import login from '../src/components/Login.vue'
+import searchRes from '../src/components/SearchResults.vue'
+import register from '../src/components/Register.vue'
+
+
+
+Vue.use(VueRouter);
 
 Vue.config.productionTip = false
 
+const router = new VueRouter({
+  mode: 'history',
+  base: __dirname,
+  routes: [
+    { path: '/home', component: home },
+    { path: '/account', component: account },
+    { path: '/recipe', component: recipe },
+    { path: '/archive', component: archive },
+    { path: '/search-res', component: searchRes },
+    { path: '/add-recipe', component: addRecipe },
+    { path: '/login', component: login },
+    { path: '/register', component: register },
+  ]
+});
+
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app')
