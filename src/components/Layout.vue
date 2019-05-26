@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <myHeader></myHeader>
+    <myHeader class="my-header"></myHeader>
   </div>
 </template>
 
@@ -34,4 +34,8 @@ li {
 a {
   color: #42b983;
 } */
+
+.my-header{
+  margin-bottom: 40px;
+}
 </style>
