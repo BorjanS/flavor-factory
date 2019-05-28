@@ -37,5 +37,7 @@ a {
 
 .my-header{
   margin-bottom: 40px;
+  padding-bottom: 10px;
+  border-bottom:1px solid #aaa;
 }
 </style>
