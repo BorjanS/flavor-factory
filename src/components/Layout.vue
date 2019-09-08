@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <myHeader class="my-header"></myHeader>
+  <div>
+    <myHeader class="my-header mb-5 divider"></myHeader>
   </div>
 </template>
 
@@ -19,25 +19,17 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-/* h3 {
-  margin: 40px 0 0;
+<style>
+
+.divider{
+
+  box-shadow: 0 1em 1em -1em rgba(0, 0, 0, .25);
 }
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-} */
 
 .my-header{
-  margin-bottom: 40px;
-  padding-bottom: 10px;
-  border-bottom:1px solid #aaa;
+background-color: white;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Lora&display=swap');
+
 </style>

@@ -1,90 +1,98 @@
 <template>
 <div>
-    <div class="container boxes">
-        <div class="row">
-            <div class="single-box col-lg-4" @click="goToRecipe">
-                <img src="../assets/img/pizza.jpg">
-                <div class="single-box-content">
-                    <h5>Wanna learn how to make pizza?</h5>
-                    <p>Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet!Lorem ipsum dolor sit amet!</p>
-                </div>
-            </div>
+  <div class="container">
+      <h3 class="text-center mt-3">Fresh out the oven</h3>
 
-            <div class="single-box col-lg-4">
-                <img src="../assets/img/burek.jpg">
-                <div class="single-box-content">
-                    <h5>Wanna learn how to make burek?</h5>
-                    <p>Lorem ipsum dolor sit amet!Lorem ipsum dolor sit amet! </p>
-                </div>
-            </div>
+    <div class="card-group ">
+      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
+        <img src="../assets/img/hamburger.jpg" class="card-img-top rounded-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title mb-4">Card title</h5>
+          <a href="#" class="black-box">Read more</a>
+        </div>
+      </div>
+      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
+        <img src="../assets/img/burek.jpg" class="card-img-top rounded-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title mb-4">Card title</h5>
+          <a href="#" class="black-box">Read more</a>
+        </div>
+      </div>
+      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
+        <img src="../assets/img/chicken-nuggets.jpg" class="card-img-top rounded-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title mb-4">Card title</h5>
+          <a href="#" class="black-box">Read more</a>
+        </div>
+      </div>
+    </div>
+</div>
+    <h3 class="text-center mt-3 mb-3">More recipes</h3>
 
-            <div class="single-box col-lg-4">
-                <img src="../assets/img/fries.jpg">
-                <div class="single-box-content">
-                    <h5>Wanna learn how to make fries?</h5>
-                    <p>Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet!</p>
-                </div>
-            </div>
+    <div class="container-fluid gray-bg search-box parent mt-3 mb-3">
+        <div class="row child" >
+    <div class="col-md-12 m-auto ">
+     <div class="input-group  ">
+  <input type="text" class="form-control " placeholder="Ex. chicken nuggets " aria-label="Ex. chicken nuggets" aria-describedby="button-addon2">
+  <div class="input-group-append">
+    <button class="btn btn-danger" type="button" id="button-addon2">Search</button>
+  </div>
+</div>
+    </div>
+  </div>
+    </div>
+<div class="container text-center">
+ <div class="card-group ">
+      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
+        <img src="../assets/img/hamburger.jpg" class="card-img-top rounded-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title mb-4">Card title</h5>
+          <a href="#" class="black-box">Read more</a>
+        </div>
+      </div>
+      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
+        <img src="../assets/img/burek.jpg" class="card-img-top rounded-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title mb-4">Card title</h5>
+          <a href="#" class="black-box">Read more</a>
+        </div>
+      </div>
+      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
+        <img src="../assets/img/chicken-nuggets.jpg" class="card-img-top rounded-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title mb-4">Card title</h5>
+          <a href="#" class="black-box">Read more</a>
+        </div>
+      </div>
+    </div>
 
-            <!-- Button and search -->
-            <div class="our-recepies">
-                <button>Our recepies</button>
-            </div>
-            <div class="search-div">
-                <input class="search" type="text" placeholder="Search...">
-                <button><span class="fa fa-search search-icon"></span></button>
-            </div>
+     <div class="card-group ">
+      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
+        <img src="../assets/img/hamburger.jpg" class="card-img-top rounded-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title mb-4">Card title</h5>
+          <a href="#" class="black-box">Read more</a>
+        </div>
+      </div>
+      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
+        <img src="../assets/img/burek.jpg" class="card-img-top rounded-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title mb-4">Card title</h5>
+          <a href="#" class="black-box">Read more</a>
+        </div>
+      </div>
+      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
+        <img src="../assets/img/chicken-nuggets.jpg" class="card-img-top rounded-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title mb-4">Card title</h5>
+          <a href="#" class="black-box">Read more</a>
+        </div>
+      </div>
+    </div>
+     <button class="btn btn-danger mt-4" type="button" >See all</button>
 
-            <!-- Seccond grid -->
-            <div class="single-box col-lg-4">
-                <img src="../assets/img/hamburger.jpg">
-                <div class="single-box-content">
-                    <h5>Wanna learn how to make hamburger?</h5>
-                    <p>Lorem ipsum dolor sit amet!Lorem ipsum dolor sit amet!Lorem ipsum dolor sit amet!</p>
-                </div>
-            </div>
 
-            <div class="single-box col-lg-4">
-                <img src="../assets/img/burito.jpg">
-                <div class="single-box-content">
-                    <h5>Wanna learn how to make burito?</h5>
-                    <p>Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet!</p>
-                </div>
-            </div>
-
-            <div class="single-box col-lg-4">
-                <img src="../assets/img/chicken-nuggets.jpg">
-                <div class="single-box-content">
-                    <h5>Wanna learn how to make chicken nuggets?</h5>
-                    <p>Lorem ipsum dolor sit amet!</p>
-                </div>
-            </div>
-
-            <div class="single-box col-lg-4" @click="goToRecipe">
-                <img src="../assets/img/pizza.jpg">
-                <div class="single-box-content">
-                    <h5>Wanna learn how to make pizza?</h5>
-                    <p>Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet!Lorem ipsum dolor sit amet!</p>
-                </div>
-            </div>
-
-            <div class="single-box col-lg-4">
-                <img src="../assets/img/burek.jpg">
-                <div class="single-box-content">
-                    <h5>Wanna learn how to make burek?</h5>
-                    <p>Lorem ipsum dolor sit amet!Lorem ipsum dolor sit amet! </p>
-                </div>
-            </div>
-
-            <div class="single-box col-lg-4">
-                <img src="../assets/img/fries.jpg">
-                <div class="single-box-content">
-                    <h5>Wanna learn how to make fries?</h5>
-                    <p>Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet! Lorem ipsum dolor sit amet!</p>
-                </div>
-            </div>
-
-          
+        
                 <div class="col-lg-7 join-fun">
                     <p>JOIN THE FUN</p>
                 </div>
@@ -101,105 +109,185 @@
             </div>
 
             <div style="height:200px; width:100%; margin:70px 0; border:1px solid #aaa"><p style="text-align:center; margin-top:8%">QUICK LINKS</p></div>
-        </div>
-    </div>
+     
+
 </div>
+
+
+  
+  </div>
 </template>
 
 <script>
 export default {
-    // name:'home'
-    methods: {
-        goToRecipe() {
-            this.$router.push('recipe')
-        }
+  // name:'home'
+  methods: {
+    goToRecipe() {
+      this.$router.push("recipe");
     }
-}
+  }
+};
 </script>
 
 <style>
 .main-cover {
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
 }
 
 .boxes {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .single-box {
-    width: 100%;
-    height: 400px;
-    margin-bottom: 20px;
+  width: 100%;
+  height: 400px;
+  margin-bottom: 20px;
 }
 
 .single-box img {
-    width: 100%;
-    height: 250px;
-    border: 1px solid #aaa;
-    cursor: pointer;
+  width: 100%;
+  height: 250px;
+  border: 1px solid #aaa;
+  cursor: pointer;
 }
 
 .single-box-content {
-    padding: 15px;
-    border: 1px solid #aaa;
-    height: 150px;
-    cursor: pointer;
+  padding: 15px;
+  border: 1px solid #aaa;
+  height: 150px;
+  cursor: pointer;
 }
 
 .our-recepies {
-    transform: translateX(-50%);
-    margin-left: 50%;
-    width: 100%;
-    margin-top: 70px;
+  transform: translateX(-50%);
+  margin-left: 50%;
+  width: 100%;
+  margin-top: 70px;
 }
 
 .our-recepies button {
-    padding: 5px 10px;
-    background-color: #FF0000;
-    color: white;
-    font-weight: 600;
-    border-color: #FF0000;
+  padding: 5px 10px;
+  background-color: #ff0000;
+  color: white;
+  font-weight: 600;
+  border-color: #ff0000;
 }
 
 .search-div {
-    transform: translateX(-50%);
-    margin-left: 50% !important;
-    margin: 30px 0 70px 0;
+  transform: translateX(-50%);
+  margin-left: 50% !important;
+  margin: 30px 0 70px 0;
 }
 
 input::placeholder {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
-.search-icon {}
-
-.join-fun{
-    margin-top:60px;
+.search-icon {
 }
 
-.submit-recipe{
-    margin-top:60px;
+.join-fun {
+  margin-top: 60px;
 }
 
-.categories{   
-    display: inline-flex;
-    margin-top:70px;
-    margin-bottom:40px;
-    margin-left:50%;
-    transform:translateX(-50%);
+.submit-recipe {
+  margin-top: 60px;
 }
 
-.single-category{
-    width:80px; 
-    height:80px; 
-    border-radius:50%; 
-    background-color:#aaa; 
-    margin-right:50px;
-    cursor:pointer;
+.categories {
+  display: inline-flex;
+  margin-top: 70px;
+  margin-bottom: 40px;
+  margin-left: 50%;
+  transform: translateX(-50%);
 }
 
-.single-category p{
-    margin-top:90px;
+.single-category {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #aaa;
+  margin-right: 50px;
+  cursor: pointer;
 }
+
+.single-category p {
+  margin-top: 90px;
+}
+
+.card {
+background-color: #fff;
+border: none;
+border-radius: 0 !important;
+box-shadow: 0 .46875rem 2.1875rem rgba(90,97,105,.1),0 .9375rem 1.40625rem rgba(90,97,105,.1),0 .25rem .53125rem rgba(90,97,105,.12),0 .125rem .1875rem rgba(90,97,105,.1);
+}
+
+.rounded-top{
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 0!important;
+}
+
+.card-img-top{
+    height: 220px;
+    width: auto;
+}
+
+.card-title, h3{
+    font-family: "Lora", serif;
+    
+}
+
+.search-box{
+    height: 120px;
+}
+.divider{
+  text-align:center;
+  /* padding:30px 0; */
+  /* margin:0 30%; */
+  box-shadow: 0 1em 1em -1em rgba(0, 0, 0, .25);
+}
+
+.black-box{
+    background-color: black;
+    padding: 7px;
+    color: white;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.black-box:hover {
+    color: white;
+    text-decoration: none;
+}
+
+
+.gray-bg {
+    background-color: #eaeaea;
+}
+
+.btn-danger {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.center-vert {
+  margin: auto !important;
+  width: 100%;
+  padding: 10px;
+}
+
+.parent {
+  position: relative;
+}
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 </style>
