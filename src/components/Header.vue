@@ -1,25 +1,27 @@
 <template>
   <div>
     <div class="row header-class center-vert text-center">
-      <!-- Left side -->  
+      <!-- Left side -->
       <div class="col-lg-5 center-vert">
         <!-- <li @click="changeRoute('home')">Home</li>
                 <li @click="changeRoute('account')">Account</li>
                 <li @click="changeRoute('recipe')">Recipe</li>
                 <li @click="changeRoute('archive')">Archive</li>
         <li @click="changeRoute('search-res')">Search Results</li>-->
-        <span @click="changeRoute('add-recipe')">Add new Recipe</span>
+        <router-link to="/add-recipe" class="simple-link">Add new Recipe</router-link>
       </div>
 
-      <!-- Center / logo -->  
+      <!-- Center / logo -->
       <div class="col-lg-2 hand-cursor center-vert logo-div">
-        <img @click="changeRoute('home')" src="../assets/img/logo.jpg" />
+        <router-link to="/" class="simple-link">
+          <img src="../assets/img/logo.jpg" />
+        </router-link>
       </div>
 
-      <!-- Right side -->  
+      <!-- Right side -->
       <div class="col-lg-5 center-vert">
-        <span @click="changeRoute('login')">Log in</span>
-        <span @click="changeRoute('register')">Register</span>
+        <router-link to="/login" class="simple-link">Log in</router-link>
+        <router-link to="/register" class="simple-link">Register</router-link>
       </div>
     </div>
   </div>
@@ -36,14 +38,14 @@ export default {
 </script>
 
 <style>
-.header-class span {
+.simple-link {
   display: inline;
   min-width: 50px;
   margin-left: 15px;
   cursor: pointer;
   color: #230b0b !important;
   text-transform: uppercase;
-  font-size:12px;
+  font-size: 12px;
   font-weight: 600;
 }
 
@@ -51,7 +53,7 @@ export default {
   cursor: pointer;
 }
 
-.header-class span:hover {
+.simple-link:hover {
   text-decoration: underline;
 }
 
