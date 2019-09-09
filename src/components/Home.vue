@@ -4,27 +4,14 @@
       <h3 class="text-center mt-3">Fresh out the oven</h3>
 
     <div class="card-group ">
-      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
-        <img src="../assets/img/hamburger.jpg" class="card-img-top rounded-top" alt="..." />
+      <div  v-for='recipe in recipes.reverse().slice(0, 3)'  v-bind:key="recipe.id" class="card col-lg-4 m-4 p-0 pb-2 text-center" >
+        <img :src="recipe.url" class="card-img-top rounded-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title mb-4">Card title</h5>
+          <h5 class="card-title mb-4">{{recipe.title}}</h5>
           <a href="#" class="black-box">Read more</a>
         </div>
       </div>
-      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
-        <img src="../assets/img/burek.jpg" class="card-img-top rounded-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title mb-4">Card title</h5>
-          <a href="#" class="black-box">Read more</a>
-        </div>
-      </div>
-      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
-        <img src="../assets/img/chicken-nuggets.jpg" class="card-img-top rounded-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title mb-4">Card title</h5>
-          <a href="#" class="black-box">Read more</a>
-        </div>
-      </div>
+     
     </div>
 </div>
     <h3 class="text-center mt-3 mb-3">More recipes</h3>
@@ -43,51 +30,14 @@
     </div>
 <div class="container text-center">
  <div class="card-group ">
-      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
-        <img src="../assets/img/hamburger.jpg" class="card-img-top rounded-top" alt="..." />
+      <div  v-for='recipe in recipes.map((a) => ({sort: Math.random(), value: a})).sort((a, b) => a.sort - b.sort).map((a) => a.value).slice(0, 4)'  v-bind:key="recipe.id" class="card col-lg-4 m-4 p-0 pb-2 text-center" >
+        <img :src="recipe.url" class="card-img-top-smaller rounded-top" alt="..." />
         <div class="card-body">
-          <h5 class="card-title mb-4">Card title</h5>
+          <h5 class="card-title mb-4">{{recipe.title}}</h5>
           <a href="#" class="black-box">Read more</a>
         </div>
       </div>
-      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
-        <img src="../assets/img/burek.jpg" class="card-img-top rounded-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title mb-4">Card title</h5>
-          <a href="#" class="black-box">Read more</a>
-        </div>
-      </div>
-      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
-        <img src="../assets/img/chicken-nuggets.jpg" class="card-img-top rounded-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title mb-4">Card title</h5>
-          <a href="#" class="black-box">Read more</a>
-        </div>
-      </div>
-    </div>
-
-     <div class="card-group ">
-      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
-        <img src="../assets/img/hamburger.jpg" class="card-img-top rounded-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title mb-4">Card title</h5>
-          <a href="#" class="black-box">Read more</a>
-        </div>
-      </div>
-      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
-        <img src="../assets/img/burek.jpg" class="card-img-top rounded-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title mb-4">Card title</h5>
-          <a href="#" class="black-box">Read more</a>
-        </div>
-      </div>
-      <div class="card col-lg-4 m-4 p-0 pb-2 text-center" >
-        <img src="../assets/img/chicken-nuggets.jpg" class="card-img-top rounded-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title mb-4">Card title</h5>
-          <a href="#" class="black-box">Read more</a>
-        </div>
-      </div>
+     
     </div>
      <button class="btn btn-danger mt-4" type="button" >See all</button>
 
@@ -119,12 +69,32 @@
 </template>
 
 <script>
+import axios from 'axios'
+
+
 export default {
   // name:'home'
+
+data: function () {
+    return {
+      recipes: []
+    }
+  },
+
   methods: {
     goToRecipe() {
       this.$router.push("recipe");
     }
+  },
+
+  
+
+  created() {
+
+    axios.get('http://localhost:3000/api/recipecard').then((response) => {
+        this.recipes = response.data;
+    })
+
   }
 };
 </script>
@@ -229,8 +199,13 @@ box-shadow: 0 .46875rem 2.1875rem rgba(90,97,105,.1),0 .9375rem 1.40625rem rgba(
 }
 
 .card-img-top{
-    height: 220px;
-    width: auto;
+    height: 322px;
+    width: 322px;
+}
+
+.card-img-top-smaller{
+    height: 230px;
+    width: 230px;
 }
 
 .card-title, h3{

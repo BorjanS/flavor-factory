@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './App'
 import VueRouter from 'vue-router'
+import axios from 'axios'
+import VueAxios from 'vue-axios'
+ 
 
 import home from '../src/components/Home.vue'
 import account from '../src/components/Account.vue'
@@ -14,6 +17,7 @@ import register from '../src/components/Register.vue'
 
 
 Vue.use(VueRouter);
+Vue.use(VueAxios, axios);
 
 Vue.config.productionTip = false
 

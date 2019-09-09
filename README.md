@@ -1,29 +1,31 @@
-# real-world-vue
+# Flavor Factory
 
-## Project setup
+## Connect with DB first
+```
+npm install -g xmysql
+```
+
+Read more about xmysql <a href="https://www.npmjs.com/package/xmysql">here</a>.
+
+Make the api available with the following command:
+
+```
+xmysql -h XXX.XXX.XXX.XXX -u flavoradmin -p XXXXXXXXXXX -d flavorfactory
+```
+
+## Project commands
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
 ```
 npm run build
 ```
-
-### Run your tests
 ```
 npm run test
 ```
-
-### Lints and fixes files
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
