@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container">
-      <h3 class="text-center mt-3">Fresh out the oven</h3>
+      <h3 class="text-center mt-3 ">Fresh out the oven</h3>
 
       <div class="card-group">
         <div
@@ -54,34 +54,32 @@
 
       <router-link to="/archive" class="btn btn-danger mt-5 mb-5">See all</router-link>
     </div>
-    <div class="container-fluid bg-image join-the-fun">
-      <div class="col-lg-7 join-fun">
-        <p>JOIN THE FUN</p>
+    <div class="container-fluid bg-image join-the-fun text-center">
+      <div class=" pt-5">
+        <span class=" highlight">Join the fun!</span>
+        <p class="mt-4">Submit your own recipe and share the love :)</p>
+        <router-link to="/add-recipe" class="btn btn-danger mt-2">Add new recipe</router-link>
       </div>
+
     </div>
+    
     <div class="container">
-      <div class="col-lg-5 submit-recipe">
-        <button>Submit recipe ></button>
-      </div>
 
-      <div class="categories">
-        <div class="single-category">
-          <p>Category1</p>
-        </div>
-        <div class="single-category">
-          <p>Category2</p>
-        </div>
-        <div class="single-category">
-          <p>Category3</p>
-        </div>
-        <div style="margin-right:0!important" class="single-category">
-          <p>Category4</p>
-        </div>
-      </div>
+ <h3 class="text-center mt-5">Explore</h3>
+        <div class="row align-items-center">
 
-      <div style="height:200px; width:100%; margin:70px 0; border:1px solid #aaa">
-        <p style="text-align:center; margin-top:8%">QUICK LINKS</p>
+            <div class="col-lg-3"></div>
+      <div class="categories col-lg-6 mt-5 mb-5">
+        <div v-for="category in categories"
+          v-bind:key="category.c_id"
+          class="single-category">
+          <img class="cat-icon" :src="category.image">
+          <p>{{category.category_name}}</p>
+        </div>
       </div>
+       <div class="col-lg-3"></div>
+        </div>
+
     </div>
   </div>
 </template>
@@ -95,7 +93,8 @@ export default {
   data: function() {
     return {
       latestRecipes: [],
-      allRecipesRandom: []
+      allRecipesRandom: [],
+      categories: []
     };
   },
 
@@ -121,6 +120,11 @@ export default {
       this.shuffle(response.data);
       this.allRecipesRandom = response.data.splice(0, 4);
     });
+
+    axios.get("http://localhost:3000/api/categories").then(response => {
+        this.shuffle(response.data);
+      this.categories = response.data.splice(0, 5);
+    });
   }
 };
 </script>
@@ -128,6 +132,19 @@ export default {
 <style>
 .join-the-fun {
   height: 250px;
+font-family: "Lora", serif;
+}
+
+.join-the-fun p {
+    font-size: 22px;
+}
+.highlight{
+    background-color:darkgreen;
+    padding: 7px 15px;
+    font-style: italic;
+    color:white;
+    font-family: "Lora", serif;
+    font-size: 28px;
 }
 .search-div {
   transform: translateX(-50%);
@@ -139,6 +156,23 @@ input::placeholder {
   padding-left: 10px;
 }
 
+.categories {
+    display:flex;
+     justify-content: space-between;
+}
+.single-category {
+   
+   text-align: center;
+    
+}
+
+.cat-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #eaeaea;
+    padding: 10px;
+    border-radius: 100%;
+}
 .card {
   background-color: #fff;
   border: none;
@@ -167,6 +201,11 @@ input::placeholder {
 .card-title,
 h3 {
   font-family: "Lora", serif;
+
+}
+
+h3 {
+    font-style: italic;
 }
 
 .search-box {
@@ -181,7 +220,7 @@ h3 {
 
 .black-box {
   background-color: black;
-  padding: 7px;
+  padding: 7px 15px;
   color: white;
   font-weight: 600;
   font-size: 12px;
@@ -202,6 +241,8 @@ h3 {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
+  font-family: 'Avenir', 'Helvetica', sans-serif;
+border-radius: 0;
 }
 
 .center-vert {

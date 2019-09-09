@@ -1,28 +1,28 @@
 <template>
-  <div>
-    <div class="row header-class center-vert text-center">
+  <div class="header-class">
+    <div class="container">
+    <div class="row  center-vert ">
       <!-- Left side -->
-      <div class="col-lg-5 center-vert">
+      <div class="col-lg-4 center-vert ">
         <!-- <li @click="changeRoute('home')">Home</li>
                 <li @click="changeRoute('account')">Account</li>
                 <li @click="changeRoute('recipe')">Recipe</li>
                 <li @click="changeRoute('archive')">Archive</li>
         <li @click="changeRoute('search-res')">Search Results</li>-->
-        <router-link to="/add-recipe" class="simple-link">Add new Recipe</router-link>
+      
       </div>
 
       <!-- Center / logo -->
-      <div class="col-lg-2 hand-cursor center-vert logo-div">
-        <router-link to="/" class="simple-link">
-          <img src="../assets/img/logo.jpg" />
-        </router-link>
+      <div class="col-lg-4 text-center mt-4">
+       <img class="footer-logo" src="../assets/img/Flavor Factory logo.png" /> <br>
+       <p class=text-light><small>All rights reserved 2019 <sup>©</sup></small></p>
       </div>
 
       <!-- Right side -->
-      <div class="col-lg-5 center-vert">
-        <router-link to="/login" class="simple-link">Log in</router-link>
-        <router-link to="/register" class="simple-link">Register</router-link>
+      <div class="col-lg-4 center-vert">
+
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -37,13 +37,13 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 .simple-link {
   display: inline;
   min-width: 50px;
   margin-right: 15px;
   cursor: pointer;
-  color: #230b0b !important;
+  color:white!important;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 600;
@@ -61,6 +61,9 @@ export default {
   width: 100%;
 }
 
+.footer-logo {
+    width: 150px;
+}
 .header-class {
   height: 120px;
 }

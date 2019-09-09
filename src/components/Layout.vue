@@ -1,15 +1,18 @@
 <template>
   <div>
     <myHeader class="my-header mb-5 divider"></myHeader>
+   
   </div>
 </template>
 
 <script>
 import myHeader from './Header.vue'
+
 export default {
   name: 'layout',
   components: {
         'myHeader': myHeader,
+
     },
     data() {
         return {
