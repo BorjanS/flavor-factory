@@ -25,14 +25,14 @@ const router = new VueRouter({
   routes: [
     { path: "/", component: home },
     { path: "/home", component: home },
-    { path: "/account", component: account },
+    { path: "/account/:id", component: account },
     { path: "/recipe/:title", component: recipe },
     { path: "/archive", component: archive },
     { path: "/search-res", component: searchRes },
     { path: "/add-recipe", component: addRecipe },
     { path: "/login", component: login },
     { path: "/register", component: register },
-    { path: "/category/:title", component: category }
+    { path: "/category/:title", component: category },
   ]
 });
 
