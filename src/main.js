@@ -12,6 +12,7 @@ import addRecipe from "../src/components/AddingRecipe.vue";
 import login from "../src/components/Login.vue";
 import searchRes from "../src/components/SearchResults.vue";
 import register from "../src/components/Register.vue";
+import category from "../src/components/Category.vue";
 
 Vue.use(VueRouter);
 Vue.use(VueAxios, axios);
@@ -30,7 +31,8 @@ const router = new VueRouter({
     { path: "/search-res", component: searchRes },
     { path: "/add-recipe", component: addRecipe },
     { path: "/login", component: login },
-    { path: "/register", component: register }
+    { path: "/register", component: register },
+    { path: "/category/:title", component: category }
   ]
 });
 

@@ -73,8 +73,8 @@
         <div v-for="category in categories"
           v-bind:key="category.c_id"
           class="single-category">
-          <img class="cat-icon" :src="category.image">
-          <p>{{category.category_name}}</p>
+          <router-link :to="'/category/' + category.slug" class=" no-style-link mt-2"><img class="cat-icon" :src="category.image">
+          <p>{{category.category_name}}</p></router-link>
         </div>
       </div>
        <div class="col-lg-3"></div>
@@ -135,6 +135,12 @@ export default {
 font-family: "Lora", serif;
 }
 
+.no-style-link, .no-style-link:hover{
+    color: black;
+
+}
+
+
 .join-the-fun p {
     font-size: 22px;
 }
@@ -161,17 +167,20 @@ input::placeholder {
      justify-content: space-between;
 }
 .single-category {
-   
+   border-radius:100%;
+   /* width:55px; */
+    height:55px;
    text-align: center;
+   /* background-color: #eaeaea; */
     
 }
 
 .cat-icon {
-    width: 55px;
+
+     width:55px;
     height: 55px;
-    background-color: #eaeaea;
     padding: 10px;
-    border-radius: 100%;
+    border-radius: 0%;
 }
 .card {
   background-color: #fff;
