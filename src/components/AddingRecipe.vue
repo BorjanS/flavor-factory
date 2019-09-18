@@ -10,6 +10,17 @@
 <script>
 export default {
     
+  data: function() {
+    return {
+        isUserLoggedIn: 0
+    };
+  },
+
+  methods: {
+      created() {
+          this.foo();
+      }
+  }
 }
 </script>
 

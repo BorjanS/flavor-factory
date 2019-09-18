@@ -1,7 +1,16 @@
 <template>
   <div>
     <div class="container">
-      <h3 class="text-center mt-3 ">Fresh out the oven</h3>
+      <div class="row justify-content-md-center">
+           <h3 class="mt-3 ">Fresh out the oven</h3>
+      </div>
+     
+       <div class="row justify-content-md-center">
+          <div class="col-lg-6 ">  
+              <hr class="separator separator--line">
+          </div>
+          
+        </div>
 
       <div class="card-group">
         <div
@@ -18,6 +27,8 @@
       </div>
     </div>
     <h3 class="text-center mt-5 mb-5">More recipes</h3>
+
+
 
     <div class="container-fluid gray-bg search-box parent mt-5 mb-5">
       <div class="row child">
@@ -66,6 +77,7 @@
     <div class="container">
 
  <h3 class="text-center mt-5">Explore</h3>
+
         <div class="row align-items-center">
 
             <div class="col-lg-3"></div>
@@ -89,6 +101,7 @@ import axios from "axios";
 
 export default {
   // name:'home'
+
 
   data: function() {
     return {
@@ -116,7 +129,7 @@ export default {
 
   created() {
     axios.get("http://localhost:3000/api/recipecard").then(response => {
-      this.latestRecipes = response.data.reverse().splice(0, 3);
+      this.latestRecipes = response.data.reverse().splice(0, 4);
       this.shuffle(response.data);
       this.allRecipesRandom = response.data.splice(0, 4);
     });
@@ -198,8 +211,8 @@ input::placeholder {
 }
 
 .card-img-top {
-  height: 322px;
-  width: 322px;
+  height: 230px;
+  width: 230px;
 }
 
 .card-img-top-smaller {
@@ -274,4 +287,10 @@ border-radius: 0;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+
+
+
+
 </style>

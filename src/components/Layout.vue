@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <myHeader class="my-header mb-5 divider"></myHeader>
+  <div class="relative-cl">
+    <myHeader class="my-header mb-3 divider"></myHeader>
    
   </div>
 </template>

@@ -14,14 +14,24 @@
       <!-- Center / logo -->
       <div class="col-lg-2 hand-cursor center-vert logo-div">
         <router-link to="/" class="simple-link">
-          <img src="../assets/img/logo.jpg" />
+          <img src="../assets/img/logonew.png" />
         </router-link>
       </div>
 
       <!-- Right side -->
       <div class="col-lg-5 center-vert">
+        <div v-if="!isUserLoggedIn">
         <router-link to="/login" class="simple-link">Log in</router-link>
         <router-link to="/register" class="simple-link">Register</router-link>
+        </div>
+        <div v-if="isUserLoggedIn">
+         
+                  <img class="user-avatar" :src="loggedInUserImage" />
+                  {{loggedInUsername}}
+         
+        <router-link to="/register" class="simple-link">Log out</router-link>
+        </div>
+
       </div>
     </div>
   </div>
@@ -32,6 +42,11 @@ export default {
   methods: {
     changeRoute(prop) {
       this.$router.push(prop);
+    }
+  },
+  watch: {
+    isUserLoggedIn: function(val, oldVal) {
+     
     }
   }
 };
@@ -69,5 +84,10 @@ export default {
   margin: auto !important;
   width: 100%;
   padding: 10px;
+}
+
+.user-avatar {
+  height: 23px;
+  width: 23px;
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="header-class">
+  <div class="footer-class">
     <div class="container">
     <div class="row  center-vert ">
       <!-- Left side -->
@@ -64,8 +64,9 @@ export default {
 .footer-logo {
     width: 150px;
 }
-.header-class {
+.footer-class {
   height: 120px;
+
 }
 
 .center-vert {
